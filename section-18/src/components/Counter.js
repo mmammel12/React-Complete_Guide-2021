@@ -49,13 +49,15 @@ export default Counter;
 //     this.props.decrement();
 //   }
 
-//   toggleCounterHandler() {}
+// toggleCounterHandler() {
+//   this.props.toggle();
+// }
 
 //   render() {
 //     return (
 //       <main className={classes.counter}>
 //         <h1>Redux Counter</h1>
-//         <div className={classes.value}>{this.props.counter}</div>
+//         {showCounter && <div className={classes.value}>{this.props.counter}</div>}
 //         <div>
 //           <button onClick={this.incrementHandler.bind(this)}>Increment</button>
 //           <button onClick={this.decrementHandler.bind(this)}>Decrement</button>
@@ -71,6 +73,7 @@ export default Counter;
 // const mapStateToProps = (state) => {
 //   return {
 //     counter: state.counter,
+//     showCounter: state.showCounter,
 //   };
 // };
 
@@ -78,6 +81,7 @@ export default Counter;
 //   return {
 //     increment: () => dispatch({ type: "INCREMENT" }),
 //     decrement: () => dispatch({ type: "DECREMENT" }),
+//     toggle: () => dispatch({ type: "TOGGLE" }),
 //   };
 // };
 
